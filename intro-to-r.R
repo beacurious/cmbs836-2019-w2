@@ -13,7 +13,7 @@
 weight_kg <- 55
 
 weight_kg <- 55    # doesn't print anything
-(weight_kg <- 55)  # but putting parenthesis around the call prints the value of `weight_kg`
+(weight_kg <- 55)  # but putting parenthesis around the expression prints the value of `weight_kg`
 weight_kg          # and so does typing the name of the object
 
 2.2 * weight_kg
@@ -47,42 +47,58 @@ args(round)
 round(3.14159, digits = 2)
 round(digits = 2, x = 3.14159)
 
-# Vectors and data types
+# Vectors and Data Types
 
-weight_g <- c(50, 60, 65, 82)
-animals <- c("mouse", "rat", "dog")
+# Combine some values into a vector
+glengths <- c(4.6, 3000, 50000)
+glengths
 
-length(weight_g)
-length(animals)
+species <- c("ecoli", "human", "corn")
+species
 
-class(weight_g)
-class(animals)
+length(glengths)
+length(species)
 
-str(weight_g)
-str(animals)
+5 * glengths
 
-weight_g <- c(weight_g, 90) # add to the end of the vector
-weight_g <- c(30, weight_g) # add to the beginning of the vector
-weight_g
+double_lengths <- glengths + glengths
+double_lengths
 
+class(glengths)
+class(species)
 
-complex_number <- 1 + 4i
-logical_value <- TRUE
-integer_number = 1
+str(glengths)
+str(species)
+
+lengths <- c(glengths, 90) # adding at the end
+lengths <- c(30, glengths) # adding at the beginning
+lengths
+
+# and there Other types (beyond numeric and character)
+
+sqrt_of_minus_one <- 1i
+class(sqrt_of_minus_one)
+true_or_false_value <- TRUE
+class(true_or_false_value)
+whole_number = 1L
+class(whole_number)
 
 str(complex_number)
 str(logical_value)
 
-# Challenge
+# Challenge (optional)
 #
 # We’ve seen that atomic vectors can be of type character, 
-# numeric (or double), integer, and logical. But what happens if we try to mix these types in a single vector?
+# numeric, integer, and logical. 
+#
+# But what happens if we try to mix these types in a single vector?
 #
 # eg:
 #
 # thing <- c("some characters", 3.141, 100, TRUE)
 
 # What will happen in each of these examples? 
+#
 # (hint: use class() to check the data type of your objects):
 #   
 #   num_char <- c(1, 2, 3, "a")
@@ -100,7 +116,10 @@ str(logical_value)
 #   combined_logical <- c(num_logical, char_logical)
 
 
+#
 # Subsetting vectors
+#
+
 animals <- c("mouse", "rat", "dog", "cat")
 animals[2]
 animals[c(3, 2)]
@@ -153,3 +172,12 @@ heights[complete.cases(heights)]
 # Use the function median() to calculate the median of the heights vector.
 # 
 # Use R to figure out how many people in the set are taller than 67 inches.
+
+#
+# Getting Help
+#
+
+help.search("average")
+?mean
+args(sqrt)
+max
