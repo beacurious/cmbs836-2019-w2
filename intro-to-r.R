@@ -3,28 +3,51 @@
 #    | || '_ \| __| '__/ _ \  | __/ _ \  | |_) |
 #    | || | | | |_| | | (_) | | || (_) | |  _ < 
 #   |___|_| |_|\__|_|  \___/   \__\___/  |_| \_\
-#                                               
+# 
+# Derived from: https://datacarpentry.org/R-genomics/
 
+# R can do sums ...
 3 + 5
 12 / 7
 
-# Creating Objects in R
+# Storing values
+a <- 3              # assign the number 3 to OBJECT (variable) called "a"
+b <- 5              # assign 5 to b [TIP: [ALT][-] is a shortcut for <- ]
 
-weight_kg <- 55
+a                   # so what's the value of OBJECT "a"
+b                   # .. and what's b
 
-weight_kg <- 55    # doesn't print anything
-(weight_kg <- 55)  # but putting parenthesis around the call prints the value of `weight_kg`
-weight_kg          # and so does typing the name of the object
+a + b               # we can add them together
 
-2.2 * weight_kg
+# Exercise
+#
+# What happens if we change a and then re-add a and b? [Hint: Try it now]
+#
+# Does it work if you just change a in the script and then add a and b? [Hint: Try it]
+#
+# Did you still get the same answer after you changed a? 
+# If so, why do you think that might be?
+#
+# We can also assign the result of a + b to a new variable, c. How would you do this?
+  
 
-weight_kg <- 57.5
-2.2 * weight_kg
 
-weight_lb <- 2.2 * weight_kg
+
+# Sensible object names are sensible ...
+
+weight_lb <- 55    # doesn't print anything
+(weight_lb <- 55)  # but putting parenthesis around the call prints the value of `genome_size_mb`
+weight_lb          # and so does typing the name of the object
+
+2.20462 * weight_lb
+
+weight_lb <- 57.5
+2.20462 * weight_lb
+
+weight_kg <- 2.20462 * weight_lb
 weight_kg <- 100
 
-# Comments
+# Comments (like this one) are usually helpful
 
 # Challenge
 # 
@@ -35,10 +58,15 @@ weight_kg <- 100
 # mass <- mass * 2.0      # mass?
 # age  <- age - 20        # age?
 # mass_index <- mass/age  # mass_index?
+#
+# How do we do we know if our answers are correct ?
+
+
 
 # Functions and Arguments
 
 sqrt(2)
+sqrt(a)
 round(3.14159)
 
 ?round
@@ -47,7 +75,36 @@ args(round)
 round(3.14159, digits = 2)
 round(digits = 2, x = 3.14159)
 
-# Vectors and data types
+# Exercise
+#
+# We’re going to work with some genome lengths (measured in megabases).
+#
+# 1. Create a variable genome_length_mb and assign it the value 4.6 (E. cloi)
+#
+# Solution:
+
+# 2. Convert this length, to the weight of the genome in picograms. Use the conversion: 978Mb = 1picogram.
+#
+# Solution:
+
+# 3. If the human genome is approx 3,300 megabases - approx how heavy is it.
+#
+# Solution:
+
+# 4. Store weight in an object called: genome_weight_pg
+#
+# Solution:
+
+# 5. If we change genome_length_mb to another value (say 2,800 - ie a mouse)
+#    does the value value of genome_weight_pg get dated ?
+#
+# Answer:
+
+
+
+#
+# Topic: Vectors and data types
+#
 
 weight_g <- c(50, 60, 65, 82)
 animals <- c("mouse", "rat", "dog")
