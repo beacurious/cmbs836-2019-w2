@@ -138,30 +138,43 @@ round(digits = 2, x = 3.14159)
 # Topic: Vectors and Data Types
 #
 
-# Combine some values
-weight_g <- c(50, 60, 65, 82)
-animals <- c("mouse", "rat", "dog")
+# Combine some values in a vector
+glengths <- c(4.6, 3000, 50000)
+glengths
 
-length(weight_g)
-length(animals)
+species <- c("ecoli", "human", "corn")
+species
 
-class(weight_g)
-class(animals)
+length(glengths)
+length(species)
 
-str(weight_g)
-str(animals)
+5 * glengths
 
-weight_g <- c(weight_g, 90) # add to the end of the vector
-weight_g <- c(30, weight_g) # add to the beginning of the vector
-weight_g
+double_lengths <- glengths + glengths
+double_lengths
 
+class(glengths)
+class(species)
 
-complex_number <- 1 + 4i
-logical_value <- TRUE
-integer_number = 1
+str(glengths)
+str(species)
 
-str(complex_number)
-str(logical_value)
+lengths <- c(glengths, 90) # adding at the end
+lengths <- c(30, glengths) # adding at the beginning
+lengths
+
+# but all the elements have to be the same type 
+length_species <- c(4.5, "ecoli")
+double_lengths_species <- length_species + length_species
+
+# and there are other types as well ...
+sqrt_of_minus_one <- 1i
+true_or_false_value <- TRUE
+whole_number = -54
+
+class(sqrt_of_minus_one)
+class(true_or_false_value)
+class(whole_number)
 
 # Challenge
 #
@@ -233,6 +246,7 @@ na.omit(heights)
 
 heights[complete.cases(heights)]
 
+
 # Challenge
 #
 # Using this vector of heights in inches, create a new vector 
@@ -241,5 +255,6 @@ heights[complete.cases(heights)]
 #     heights <- c(63, 69, 60, 65, NA, 68, 61, 70, 61, 59, 64, 69, 63, 63, NA, 72, 65, 64, 70, 63, 65)
 # 
 # Use the function median() to calculate the median of the heights vector.
+
 # 
 # Use R to figure out how many people in the set are taller than 67 inches.
