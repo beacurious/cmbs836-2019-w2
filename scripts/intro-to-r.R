@@ -6,6 +6,10 @@
 # 
 # Derived from: https://datacarpentry.org/R-genomics/
 
+#
+# Topic: Basic Calculations and using Objects
+#
+
 # R can do sums ...
 3 + 5
 12 / 7
@@ -29,16 +33,32 @@ a + b               # we can add them together
 # If so, why do you think that might be?
 #
 # We can also assign the result of a + b to a new variable, c. How would you do this?
-  
 
-
-
+#
 # Sensible object names are sensible ...
+#
+date_of_birth <- 7
+z <- 19.5
+THEMOL <- 42
+camelCaseIsGenerallyNotRecommended <-  "Unless you follow Google's Style guide"
+some <- 123
+thing <- 20
+some-thing
+names_that_are_unreasonably_long_are_not_a_good_idea <- TRUE
+nouns_are_good <- TRUE
+TRUE <- 17
+ekljre2jklwef023ijlefj93jkl23rj90f32k <- 1
+
+
+#
+# Displaying results
+#
 
 weight_lb <- 55    # doesn't print anything
 (weight_lb <- 55)  # but putting parenthesis around the call prints the value of `genome_size_mb`
 weight_lb          # and so does typing the name of the object
 
+# There a 2 and a bit pounds in a kilogram 
 2.20462 * weight_lb
 
 weight_lb <- 57.5
@@ -77,25 +97,37 @@ round(digits = 2, x = 3.14159)
 
 # Exercise
 #
+# what does the function called log10() do ?  Can you test it ?
+#
+# Answer:
+
+
+# Exercise
+#
 # We’re going to work with some genome lengths (measured in megabases).
 #
-# 1. Create a variable genome_length_mb and assign it the value 4.6 (E. cloi)
+# 1. Create a variable genome_length_mb and assign it the value 4.6 (E.cloi)
 #
 # Solution:
 
-# 2. Convert this length, to the weight of the genome in picograms. Use the conversion: 978Mb = 1picogram.
+
+# 2. Convert this length, to the weight of the genome in picograms.
+#    Use the conversion: 978Mb = 1picogram.
 #
 # Solution:
+
 
 # 3. If the human genome is approx 3,300 megabases - approx how heavy is it.
 #
 # Solution:
 
-# 4. Store weight in an object called: genome_weight_pg
+
+# 4. Store the calculated weight in an object called: genome_weight_pg
 #
 # Solution:
 
-# 5. If we change genome_length_mb to another value (say 2,800 - ie a mouse)
+
+# 5. If we change genome_length_mb to another value (say 2,800 - eg a mouse)
 #    does the value value of genome_weight_pg get dated ?
 #
 # Answer:
@@ -103,9 +135,10 @@ round(digits = 2, x = 3.14159)
 
 
 #
-# Topic: Vectors and data types
+# Topic: Vectors and Data Types
 #
 
+# Combine some values
 weight_g <- c(50, 60, 65, 82)
 animals <- c("mouse", "rat", "dog")
 
