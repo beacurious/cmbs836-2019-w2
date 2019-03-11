@@ -16,14 +16,16 @@
 
 # Storing values
 a <- 3              # assign the number 3 to OBJECT (variable) called "a"
-b <- 5              # assign 5 to b [TIP: [ALT][-] is a shortcut for <- ]
+b <- 5              # assign 5 to b
 
 a                   # so what's the value of OBJECT "a"
 b                   # .. and what's b
 
 a + b               # we can add them together
 
+# --------
 # Exercise
+# --------
 #
 # What happens if we change a and then re-add a and b? [Hint: Try it now]
 #
@@ -32,7 +34,12 @@ a + b               # we can add them together
 # Did you still get the same answer after you changed a? 
 # If so, why do you think that might be?
 #
-# We can also assign the result of a + b to a new variable, c. How would you do this?
+# We can also assign the result of a + b to a new variable, c. 
+# How would you do this?
+#
+# Solution:
+
+
 
 #
 # Sensible object names are sensible ...
@@ -49,9 +56,21 @@ nouns_are_good <- TRUE
 TRUE <- 17
 ekljre2jklwef023ijlefj93jkl23rj90f32k <- 1
 
+# --------
+# Exercise
+# --------
+#
+# Assign the code of this unit to a object with a good name.
+#
+# Solution: [Hint:       <- "CBMS836"]
+
+# Assign the name of this room to an object
+#
+# Solution: [Hint:      <- "14SCO130"]
+
 
 #
-# Displaying results
+# Topic: Displaying results
 #
 
 weight_lb <- 55    # doesn't print anything
@@ -67,9 +86,11 @@ weight_lb <- 57.5
 weight_kg <- 2.20462 * weight_lb
 weight_kg <- 100
 
-# Comments (like this one) are usually helpful
 
-# Challenge
+
+# --------
+# Exercise
+# --------
 # 
 # What are the values after each statement in the following?
 # 
@@ -79,11 +100,31 @@ weight_kg <- 100
 # age  <- age - 20        # age?
 # mass_index <- mass/age  # mass_index?
 #
-# How do we do we know if our answers are correct ?
+# How do we do we know if our answers are correct ? 
+# [Hint: <highlight> [ALT][ENTER]
+
+#
+# Topic: Comments
+#
+
+# Comments (like this one) are usually helpful
+  # they can also be indented
+#
+# The should be supportive (not redunant)
+
+# --------
+# Exercise
+# --------
+#
+# Comment the following lines of code
+
+ft <- 3
+in <- ft * 12
+cms <- in * 2.54
+m = cms / 100
 
 
-
-# Functions and Arguments
+# Topic: Functions and Arguments
 
 sqrt(2)
 sqrt(a)
@@ -102,11 +143,13 @@ round(digits = 2, x = 3.14159)
 # Answer:
 
 
+# --------
 # Exercise
+# --------
 #
 # We’re going to work with some genome lengths (measured in megabases).
 #
-# 1. Create a variable genome_length_mb and assign it the value 4.6 (E.cloi)
+# 1. Create object genome_length_mb and assign it the value 4.6 (E.cloi)
 #
 # Solution:
 
@@ -132,7 +175,7 @@ round(digits = 2, x = 3.14159)
 #
 # Answer:
 
-
+# --------
 
 #
 # Topic: Vectors and Data Types
@@ -159,42 +202,50 @@ class(species)
 str(glengths)
 str(species)
 
-lengths <- c(glengths, 90) # adding at the end
-lengths <- c(30, glengths) # adding at the beginning
+lengths <- c(glengths, 90)        # adding at the end
+lengths <- c(30, glengths)        # adding at the beginning
 lengths
 
-# but all the elements have to be the same type 
+# note all the elements have to be the same type 
 length_species <- c(4.5, "ecoli")
-double_lengths_species <- length_species + length_species
+length_species
 
 # and there are other types as well ...
 sqrt_of_minus_one <- 1i
 true_or_false_value <- TRUE
-whole_number = -54
+whole_number = -54L
 
 class(sqrt_of_minus_one)
 class(true_or_false_value)
 class(whole_number)
 
-# Challenge
+# --------
+# Exercise
+# --------
 #
 # We’ve seen that atomic vectors can be of type character, 
 # numeric (or double), integer, and logical. But what happens if we try to mix these types in a single vector?
 #
 # eg:
 #
-# thing <- c("some characters", 3.141, 100, TRUE)
-
-# What will happen in each of these examples? 
-# (hint: use class() to check the data type of your objects):
-#   
+#   thing <- c("some characters", 3.141, 100, TRUE)
+#   thing
+#   class(thing)
+#
+# What will happen in each of these examples?
+#
 #   num_char <- c(1, 2, 3, "a")
 #   num_logical <- c(1, 2, 3, TRUE)
 #   char_logical <- c("a", "b", "c", TRUE)
 #   tricky <- c(1, 2, 3, "4")
 #
-# Why do you think it happens?
+# [Hint: use class() to check the data type of your objects]
+#
+# Can you explain why you think it happens?
 
+# --------
+# Exercise
+# --------
 # How many values in combined_logical are "TRUE" (as a character)
 # in the following example:
 #   
@@ -203,7 +254,7 @@ class(whole_number)
 #   combined_logical <- c(num_logical, char_logical)
 
 
-# Subsetting vectors
+# Topic: Subsetting vectors
 animals <- c("mouse", "rat", "dog", "cat")
 animals[2]
 animals[c(3, 2)]
@@ -212,8 +263,8 @@ more_animals <- animals[c(1, 2, 3, 2, 1, 4)]
 more_animals
 
 # Conditional subsetting
-weight_g <- c(21, 34, 39, 54, 55)
-weight_g[c(TRUE, FALSE, TRUE, TRUE, FALSE)]
+weight_g <- c(21,   34,    39,   54,   55)
+weight_g[   c(TRUE, FALSE, TRUE, TRUE, FALSE)]
 
 weight_g > 50
 weight_g[weight_g > 50]
@@ -228,12 +279,14 @@ animals[animals == "cat" | animals == "rat"] # returns both rat and cat
 animals %in% c("rat", "cat", "dog", "duck", "goat")
 animals[animals %in% c("rat", "cat", "dog", "duck", "goat")]
 
-# Challenge (optional)
+# Challenge
 #
 # Can you figure out why "four" > "five" returns TRUE?
+#
+# Answer:
 
 
-# Missing data (NA - Not Available)
+# Topic: Missing data (NA - Not Available)
 
 heights <- c(2, 4, 4, NA, 6)
 mean(heights)
@@ -243,18 +296,20 @@ max(heights, na.rm = TRUE)
 
 heights[!is.na(heights)]
 na.omit(heights)
-
 heights[complete.cases(heights)]
 
-
-# Challenge
+# --------
+# Exercise
+# --------
 #
 # Using this vector of heights in inches, create a new vector 
 # with the NAs removed.
 # 
-#     heights <- c(63, 69, 60, 65, NA, 68, 61, 70, 61, 59, 64, 69, 63, 63, NA, 72, 65, 64, 70, 63, 65)
+#   heights <- c(63, 69, 60, 65, NA, 68, 61, 70, 61, 59, 64, 69, 63, 63, NA, 72, 65, 64, 70, 63, 65)
 # 
 # Use the function median() to calculate the median of the heights vector.
 
-# 
+
 # Use R to figure out how many people in the set are taller than 67 inches.
+#
+# [Hint: remove the NA's first]
