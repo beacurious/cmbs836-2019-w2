@@ -51,10 +51,6 @@ a + b               # we can add them together
 #
 # Solution:
 
-# Challange:
-#
-# Given a, b and c; use the Quadratic Formula to calculate x
-
 
 
 # Logical operators
