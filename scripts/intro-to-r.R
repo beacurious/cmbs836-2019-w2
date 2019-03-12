@@ -40,6 +40,28 @@ a + b               # we can add them together
 # Solution:
 
 
+# other operators
+#
+# - * / ** ^ ( )
+
+# 
+# Excercise:
+#
+# Calculate 10 plus 2 all divided by 3 and then squared
+#
+# Solution:
+
+# Challange:
+#
+# Given a, b and c; use the Quadratic Formula to calculate x
+
+
+
+# Logical operators
+#
+# == != < > >= <= !
+
+
 
 #
 # Sensible object names are sensible ...
@@ -47,7 +69,7 @@ a + b               # we can add them together
 date_of_birth <- 7
 z <- 19.5
 THEMOL <- 42
-camelCaseIsGenerallyNotRecommended <-  "Unless you follow Google's Style guide"
+camelCaseIsGenerallyNotRecommended <- "Unless you follow Google's Style guide"
 some <- 123
 thing <- 20
 some-thing
@@ -68,6 +90,17 @@ ekljre2jklwef023ijlefj93jkl23rj90f32k <- 1
 #
 # Solution: [Hint:      <- "14SCO130"]
 
+
+# Which of these are valid object names:
+#
+#  min_height
+#  max.height
+#  _age
+#  .mass
+#  MaxLength
+#  min-length
+#  2widths
+#  celsius2kelvin
 
 #
 # Topic: Displaying results
@@ -110,7 +143,7 @@ weight_kg <- 100
 # Comments (like this one) are usually helpful
   # they can also be indented
 #
-# The should be supportive (not redunant)
+# They should be supportive (not redundant)
 
 # --------
 # Exercise
@@ -123,12 +156,14 @@ in <- ft * 12
 cms <- in * 2.54
 m = cms / 100
 
-
+#
 # Topic: Functions and Arguments
-
+#
 sqrt(2)
 sqrt(a)
+abs(-23.3)
 round(3.14159)
+pi
 
 ?round
 args(round)
@@ -175,7 +210,7 @@ round(digits = 2, x = 3.14159)
 #
 # Answer:
 
-# --------
+
 
 #
 # Topic: Vectors and Data Types
@@ -206,7 +241,7 @@ lengths <- c(glengths, 90)        # adding at the end
 lengths <- c(30, glengths)        # adding at the beginning
 lengths
 
-# note all the elements have to be the same type 
+# note all the elements have to be the same type (coercion or casting)
 length_species <- c(4.5, "ecoli")
 length_species
 
@@ -253,8 +288,9 @@ class(whole_number)
 #   char_logical <- c("a", "b", "c", TRUE)
 #   combined_logical <- c(num_logical, char_logical)
 
-
+#
 # Topic: Subsetting vectors
+#
 animals <- c("mouse", "rat", "dog", "cat")
 animals[2]
 animals[c(3, 2)]

@@ -121,4 +121,7 @@ levels(temperature)[2] <- 'cool'
 # so does our metadata have factors
 str(metadata)
 
+# ---------
+# Excercise
+# ---------
 
